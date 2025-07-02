@@ -26,11 +26,11 @@
       <a href="#materials">Materials</a>
       <a href="#contact">Contact</a>
       </nav>
-      <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-      </div>
+<div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
     </header>
     <!------------------------------------------------ Header Section ---------------------------------------------------------->
     <!------------------------------------------------ Main Section ---------------------------------------------------------->
@@ -383,12 +383,26 @@
   </div>
 </footer>
 
-    <script>
+<script>
   const menuToggle = document.getElementById('menuToggle');
   const navigation = document.querySelector('.navigation');
-  menuToggle.onclick = () => {
+
+  menuToggle.addEventListener('click', () => {
     navigation.classList.toggle('open');
-  };
+    // Optional: Aria attributes for accessibility
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.navigation a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navigation.classList.contains('open')) {
+        navigation.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
 </script>
     <script>
       // Get the button
