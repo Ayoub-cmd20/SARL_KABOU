@@ -2,8 +2,8 @@
 
 * {
   font-family: "Poppins", sans-serif;
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 50px;
+  padding: 12px 12px 12px 12px;
   box-shadow: 0 2px 12px rgba(0, 36, 68, 0.08);
   transition: background 0.3s;
 }
@@ -44,10 +44,6 @@ header {
   background: #e3f1ff;
   color: #002c5c;
 }
-
-
-/* Responsive: Header, Navigation, and Main for Mobile */
-/* filepath: c:\Users\LENOVO\Desktop\Nouveau dossier (3)\lyc+®e_imam_malek\index.css */
 
 /* Hamburger menu icon */
 .menu-toggle {
@@ -1004,14 +1000,353 @@ section {
     box-shadow: 0 8px 20px rgba(0, 191, 255, 0.45);
 }
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 767.98px) {
+/* Small devices (max-width: 576px) */
+@media (max-width: 576px) {
+  section {
+    padding: 60px 10px;
+  }
+
+  header {
+    padding: 10px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.1em;
+    padding: 8px 12px;
+  }
+
+  .logo img,
+  .logo-img {
+
+    margin-right: 8px;
+  }
+
+  .menu-toggle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
+    gap: 0;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation a {
+    padding: 12px 10px;
+    font-size: 0.98em;
+    border-radius: 0;
+    text-align: left;
+  }
+
+  .about-us {
+    padding: 40px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 8px;
+  }
+
+  .about-image,
+  .about-content {
+    min-width: 0;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.6em;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+
+  .section-title::after {
+    width: 38px;
+    height: 3px;
+  }
+
+  .intro-text {
+    font-size: 1em;
+    margin-bottom: 18px;
+  }
+
+  .info-grid {
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .info-item {
+    padding: 14px;
+  }
+
+  .btn,
+  .btn.secondary-btn {
+    padding: 10px 18px;
+    font-size: 1em;
+    border-radius: 30px;
+  }
+
+  .main {
+    padding: 60px 6px;
+  }
+
+  .main > div {
+    padding: 12px;
+  }
+
+  .main h3 {
+    font-size: 1.2em;
+  }
+
+  .main h3 span {
+    font-size: 1.5em;
+  }
+
+  .main h4 {
+    font-size: 0.95em;
+    margin-bottom: 18px;
+  }
+
+  .main-btn {
+    padding: 0.6em 1.2em;
+    font-size: 0.98em;
+  }
+
+  .cards {
+    padding: 40px 6px;
+  }
+
+  .title {
+    font-size: 1.3em;
+    margin-bottom: 24px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .card img {
+    max-width: 100px;
+    padding: 4px;
+    margin-bottom: 10px;
+  }
+
+  .card ul li {
+    font-size: 0.98em;
+    margin-bottom: 6px;
+    padding-left: 16px;
+  }
+
+  .realized-projects {
+    padding: 40px 0;
+  }
+
+  .realized-projects .container {
+    padding: 0 6px;
+  }
+
+  .realized-projects .section-title {
+    font-size: 1.5em;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  .realized-projects .section-title::after {
+    width: 38px;
+    height: 3px;
+  }
+
+  .realized-projects .section-intro {
+    font-size: 1em;
+    margin-bottom: 28px;
+  }
+
+  .project-item {
+    padding: 14px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    gap: 10px;
+  }
+
+  .project-item .project-title {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .project-gallery .gallery-link {
+    grid-template-columns: 1fr;
+    height: 110px;
+    gap: 2px;
+  }
+
+  .gallery-overlay .view-all-text {
+    font-size: 1em;
+  }
+
+  .our-resources {
+    padding: 40px 0;
+  }
+
+  .our-resources .container {
+    padding: 0 6px;
+  }
+
+  .our-resources .section-title {
+    font-size: 1.5em;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  .our-resources .section-title::after {
+    width: 38px;
+    height: 3px;
+  }
+
+  .our-resources .section-intro {
+    font-size: 1em;
+    margin-bottom: 28px;
+  }
+
+  .resources-grid {
+    gap: 24px;
+    margin-top: 18px;
+  }
+
+  .human-resources,
+  .material-resources {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .resource-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+
+  .personnel-list li {
+    font-size: 0.98em;
+    padding: 7px 8px;
+    gap: 6px;
+  }
+
+  .personnel-sublist {
+    margin-left: 18px;
+  }
+
+  .materials-table th,
+  .materials-table td {
+    padding: 7px 4px;
+    font-size: 0.98em;
+  }
+
+  .materials-table th {
+    font-size: 1em;
+  }
+
+  .contact {
+    padding: 40px 4px 20px 4px;
+  }
+
+  .contact .section-title {
+    font-size: 1.2em;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .contact .section-title::after {
+    width: 38px;
+    height: 3px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 14px;
+    max-width: 100%;
+    margin: 18px auto 0 auto;
+  }
+
+  .contact-card {
+    padding: 14px 10px;
+    border-radius: 10px;
+    min-width: 0;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .contact-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3em;
+  }
+
+  .contact-info h3 {
+    font-size: 1em;
+    margin-bottom: 4px;
+  }
+
+  .contact-info p {
+    font-size: 0.98em;
+  }
+
+  .footer {
+    padding: 16px 0 10px 0;
+  }
+
+  .footer-title {
+    font-size: 0.95em;
+    gap: 4px;
+  }
+
+  #scrollToTopBtn,
+  .btn.secondary-btn.back-to-top {
+    width: 38px;
+    height: 38px;
+    font-size: 1em;
+    padding: 0;
+    bottom: 14px;
+    right: 14px;
+  }
+}
+
+/* Medium devices (max-width: 1000px) */
+@media (max-width: 1000px) {
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  
   header {
     padding: 12px 20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    width: 100%;
   }
-
 
   .logo-img{
     width: 250px;
