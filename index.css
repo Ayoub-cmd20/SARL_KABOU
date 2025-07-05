@@ -139,7 +139,7 @@ header {
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .section-title::after {
@@ -999,6 +999,87 @@ section {
     transform: translateY(-5px) scale(1.05); /* More pronounced hover effect */
     box-shadow: 0 8px 20px rgba(0, 191, 255, 0.45);
 }
+    .comment-section {
+      background: #f9f9f9;
+      padding: 40px 0 30px 0;
+      border-top: 1px solid #e0e0e0;
+    }
+    .comment-section .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .comment-form {
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px 20px 16px 20px;
+      box-shadow: 0 2px 8px #0001;
+      margin-bottom: 32px;
+    }
+    .comment-form .form-group {
+      margin-bottom: 18px;
+    }
+    .comment-form label {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    .comment-form input,
+    .comment-form textarea {
+      width: 100%;
+      border: 1px solid #cfd8dc;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 1rem;
+      background: #fafbfc;
+      transition: border 0.2s;
+      resize: none;
+    }
+    .comment-form input:focus,
+    .comment-form textarea:focus {
+      border-color: #00bfff;
+      outline: none;
+    }
+    .comment-form button {
+      margin-top: 8px;
+      min-width: 120px;
+    }
+    .comments-list {
+      margin-top: 10px;
+    }
+    .comment-item {
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px #0001;
+      padding: 16px 18px 12px 18px;
+      margin-bottom: 18px;
+      border-left: 4px solid #00bfff;
+    }
+    .comment-header {
+      font-weight: 600;
+      color: #0099cc;
+      margin-bottom: 4px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .comment-name {
+      font-size: 1.05em;
+    }
+    .comment-role {
+      font-size: 0.95em;
+      color: #888;
+      background: #e3f6fd;
+      border-radius: 3px;
+      padding: 2px 8px;
+      margin-left: 6px;
+    }
+    .comment-body {
+      color: #444;
+      font-size: 1em;
+      margin-top: 2px;
+      white-space: pre-line;
+    }
 /* Small devices (landscape phones, 576px and up) */
 /* Small devices (max-width: 576px) */
 @media (max-width: 576px) {
@@ -1013,7 +1094,12 @@ section {
     gap: 8px;
     width: 100%;
   }
-
+ .comment-section .container {
+        padding: 0 8px;
+      }
+      .comment-form {
+        padding: 16px 6px 10px 6px;
+      }
   .logo {
     font-size: 1.1em;
     padding: 8px 12px;
@@ -1074,6 +1160,12 @@ section {
     font-size: 1.6em;
     padding-bottom: 6px;
     margin-bottom: 16px;
+  }
+ .section-title h2{
+    font-size: 1.6em;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+
   }
 
   .section-title::after {

@@ -326,7 +326,31 @@
   </div>
 </section>
     <!------------------------------------------------ Materials Section ---------------------------------------------------------->
-    <!------------------------------------------------ Contact Section ---------------------------------------------------------->
+    <!------------------------------------------------ Commentaire Section -------------------------------------------------------->
+    <section class="comment-section" id="commentaire">
+      <div class="container">
+        <h2 class="section-title">Laissez un commentaire</h2>
+        <form class="comment-form" id="commentForm" autocomplete="off">
+          <div class="form-group">
+            <label for="userName">Nom <span>*</span></label>
+            <input type="text" id="userName" name="userName" required placeholder="Votre nom" />
+          </div>
+          <div class="form-group">
+            <label for="userRole">Rôle <span>*</span></label>
+            <input type="text" id="userRole" name="userRole" required placeholder="Votre rôle (ex: Ingénieur, Client...)" />
+          </div>
+          <div class="form-group">
+            <label for="userComment">Commentaire <span>*</span></label>
+            <textarea id="userComment" name="userComment" rows="4" required placeholder="Votre commentaire"></textarea>
+          </div>
+          <button type="submit" class="btn primary-btn">Envoyer</button>
+        </form>
+        <div class="comments-list" id="commentsList" style="overflow:hidden; white-space:nowrap; width:100%; position:relative;"></div>
+      </div>
+    </section>
+    
+   
+    <!------------------------------------------------ Contact Section ------------------------------------------------------------>
     <section class="contact" id="contact">
   <h2 class="section-title">Contactez-nous</h2>
   <div class="contact-content">
@@ -388,53 +412,6 @@
     </p>
   </div>
 </footer>
-
-<script>
-  const menuToggle = document.getElementById('menuToggle');
-  const navigation = document.querySelector('.navigation');
-
-  menuToggle.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    // Optional: Aria attributes for accessibility
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !expanded);
-  });
-
-  // Close menu when a link is clicked
-  document.querySelectorAll('.navigation a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navigation.classList.contains('open')) {
-        navigation.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-</script>
-    <script>
-      // Get the button
-      var mybutton = document.getElementById("scrollToTopBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      mybutton.onclick = function () {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      };
-    </script>
+<script src="index.js"></script>
   </body>
 </html>
